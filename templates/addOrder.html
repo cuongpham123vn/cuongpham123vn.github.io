@@ -1,0 +1,33 @@
+
+{% extends 'base-layout.html' %}
+
+{% block header %}
+ 
+      <div class="col-4">
+  <h1>{% block title %} ADD Order{% endblock %}</h1>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+    <hr>
+    <div class="container">
+      <div class="col-4">
+		<form action="/addOrder" method="GET">
+            <div class="form-group">
+                <label for="productName">product Name</label>
+                <input type="text" class="form-control" id="productName" name="productName" >
+            </div>
+            <div class="form-group">
+                <label for="productPrice">product Amount</label>
+                <input type="text" class="form-control" id="productAmount"  name="productAmount">
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Cost</label>
+                <input type="text" class="form-control" id="productPrice"  name="productPrice">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base-layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Products{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+ <hr>
+ 
+    <div class="container">
+      <div class="row text-center">
+      {% for product in  productList %}
+		  
+        <div class="col-md-4 pb-1 pb-md-0">
+          <div class="card">
+            <img class="card-img-top" src="https://ae01.alicdn.com/kf/Hd4dd7fbbbd1147b880954b8e61c59f1e1/Ch-nh-H-ng-B-p-B-Barbie-H-ng-Bao-5-Bao-G-m-Ph.jpg_q50.jpg" alt="1Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"> {{ product["name"] }} </h5>
+              <p class="card-text"> {{ product["information"] }} </p>
+				<p> {{ product["price"] }} </p>
+              <a href="/order" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 pb-1 pb-md-0">
+          <div class="card">
+            <img class="card-img-top" src="https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe2d4af9e/images/B1A6A97E_1.jpg?sw=767&sh=767&sm=fit" alt="2Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"> {{ product["name"] }} </h5>
+              <p class="card-text"> {{ product["information"] }} </p>
+				<p> {{ product["price"] }} </p>
+              <a href="/order" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 pb-1 pb-md-0">
+          <div class="card">
+            <img class="card-img-top" src="https://assets.ajio.com/medias/sys_master/root/hdb/hf8/12891324481566/-1117Wx1400H-4912519870-multi-MODEL2.jpg" alt="3Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"> {{ product["name"] }} </h5>
+              <p class="card-text"> {{ product["information"] }} </p>
+				<p> {{ product["price"] }} </p>
+              <a href="/order" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+		  {% endfor %}
+      
+{% endblock %}
+		  
+      </div>
+      
+    </div>
